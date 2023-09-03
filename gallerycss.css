@@ -1,0 +1,97 @@
+/* Reset some default styles for consistency */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+h2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #FFC0CB;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.overlay {
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+    margin: 30px;
+  }
+/* Main content styles */
+
+
+.photo-grid {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width:95%;
+    justify-content: space-evenly;
+}
+/* Adding animations for smoother transition */
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        filter: brightness(100%);
+    }
+    to {
+        filter: brightness(70%);
+    }
+}
+
+.photo-grid img:hover {
+    animation: scaleUp 0.3s ease-in-out, fadeOut 0.3s ease-in-out;
+    animation-fill-mode: both, forwards; /* Apply animation fill mode */
+
+}
+
+.photo-grid img {
+    animation: none; /* Disable animations on hover */
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4f4f4;
+}
+.img{
+    width:27%;
+}
+img{
+    width:100%;
+}
